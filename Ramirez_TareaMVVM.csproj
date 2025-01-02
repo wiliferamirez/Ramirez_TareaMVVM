@@ -74,4 +74,13 @@
 	  </Compile>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="WRAboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="WRNotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
