@@ -6,8 +6,10 @@ public partial class WRNotePage : ContentPage
     public WRNotePage()
 	{
 		InitializeComponent();
-        if (File.Exists(_fileName))
-            TextEditor.Text = File.ReadAllText(_fileName);
+        string appDataPath = FileSystem.AppDataDirectory;
+        string randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
+
+        LoadNote(Path.Combine(appDataPath, randomFileName));
     }
 
     private void WRDeleteButton_Clicked(object sender, EventArgs e)
@@ -21,5 +23,18 @@ public partial class WRNotePage : ContentPage
     private void WRSaveButton_Clicked(object sender, EventArgs e)
     {
         File.WriteAllText(_fileName, TextEditor.Text);
+    }
+    private void LoadNote(string fileName)
+    {
+        Models.WRNote noteModel = new Models.WRNote();
+        noteModel.Filename = fileName;
+
+        if (File.Exists(fileName))
+        {
+            noteModel.Date = File.GetCreationTime(fileName);
+            noteModel.Text = File.ReadAllText(fileName);
+        }
+
+        BindingContext = noteModel;
     }
 }
