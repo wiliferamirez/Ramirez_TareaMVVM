@@ -1,4 +1,4 @@
-namespace Ramirez_TareaMVVM;
+namespace Ramirez_TareaMVVM.Views;
 
 public partial class WRNotePage : ContentPage
 {

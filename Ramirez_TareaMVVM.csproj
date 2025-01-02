@@ -69,16 +69,13 @@
 	  <Compile Update="WRAppShell.xaml.cs">
 	    <DependentUpon>WRAppShell.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="WRMainPage.xaml.cs">
-	    <DependentUpon>WRMainPage.xaml</DependentUpon>
-	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="WRAboutPage.xaml">
+	  <MauiXaml Update="Views\WRAboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="WRNotePage.xaml">
+	  <MauiXaml Update="Views\WRNotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
