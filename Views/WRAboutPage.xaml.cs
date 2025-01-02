@@ -9,6 +9,9 @@ public partial class WRAboutPage : ContentPage
 
     private async void LearnMore_Clicked(object sender, EventArgs e)
     {
-        await Launcher.Default.OpenAsync("https://aka.ms/maui");
+        if (BindingContext is Models.WRAbout about)
+        {
+            await Launcher.Default.OpenAsync(about.MoreInfoUrl);
+        }
     }
 }
