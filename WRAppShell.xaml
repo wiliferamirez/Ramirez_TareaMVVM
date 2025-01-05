@@ -10,7 +10,7 @@
     <TabBar>
         <ShellContent
             Title="WRNotes"
-            ContentTemplate="{DataTemplate local:WRNotePage}"
+            ContentTemplate="{DataTemplate local:WRAllNotesPage}"
             Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
 
         <ShellContent
